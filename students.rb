@@ -29,7 +29,7 @@ class Students
 	end
 
 	def calc_percentage
-		@@student_data.map {|student| student[:percentage] = "#{student[:marks]} %"}
+		@@student_data.map {|student| student[:percentage] = student[:marks].to_f/100 * 100}
 	end
 
 
