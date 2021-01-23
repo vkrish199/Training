@@ -28,6 +28,10 @@ class Students
 		end
 	end
 
+	def calc_percentage
+		@@student_data.map {|student| student[:percentage] = "#{student[:marks]} %"}
+	end
+
 
 end
 
@@ -42,3 +46,9 @@ puts "List of students: \n"
 students.list_students
 
 students.get_result("Varun")
+students.get_result("Sandeep")
+students.get_result("Tejas")
+
+students.calc_percentage
+
+students.list_students
