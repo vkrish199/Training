@@ -23,9 +23,11 @@ class Students
 	def get_result(name)
 		@@student_data.select {|a| a[:name] == name}.each do |student|
 			result = student[:marks] >= 35 ? "Passed" : "Failed"
-			puts "Student #{student[:name]} with roll no #{student[:roll_no]} has #{result}"
+			grade = case student[:marks]; when 80 .. 100 then "A"; when 60 .. 80 then "B"; when 40 .. 60 then "C"; when 0 .. 40 then "D" end
+			puts "Student #{student[:name]} with roll no #{student[:roll_no]} has #{result} with #{grade} grade"
 		end
 	end
+
 
 end
 
