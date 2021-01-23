@@ -14,14 +14,14 @@ class Students
 	end
 
 	def get_all_results
-		@@student_data.map do |student| 
+		@@student_data.each do |student| 
 			result = student[:marks] >= 35 ? "Passed" : "Failed"
 			puts "Student #{student[:name]} has #{result}"
 		end
 	end
 
 	def get_result(name)
-		@@student_data.select {|a| a[:name] == name}.map do |student|
+		@@student_data.select {|a| a[:name] == name}.each do |student|
 			result = student[:marks] >= 35 ? "Passed" : "Failed"
 			puts "Student #{student[:name]} with roll no #{student[:roll_no]} has #{result}"
 		end
