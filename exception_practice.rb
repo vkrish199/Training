@@ -13,7 +13,6 @@ def test
 		raise DivisionErrorException, "Divide by zero" if n == 0
 		r = 2/n
 		puts r
-	rescue DivisionErrorException => e
 	rescue Exception => e
 		puts e
 	end
