@@ -1,6 +1,6 @@
 class Rectangle
 
-	attr_accessor :area
+	attr_reader :area
 	attr_writer :length, :breadth
 
 	def initialize
