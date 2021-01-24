@@ -13,7 +13,7 @@ class Polygon
 	
 	private
 
-	def compute_area(polygon)
+	def compute_area
 		puts "Computing the area of polygon"
 	end
 end
@@ -27,6 +27,7 @@ class Square < Polygon
 	end
 
 	def compute_area
+		super
 		@area = 4*@side
 	end
 
@@ -44,6 +45,7 @@ class Rectangle < Polygon
 	end
 
 	def compute_area
+		super
 		@area = @length * @breadth
 	end
 
@@ -61,6 +63,7 @@ class Triangle < Polygon
 	end
 
 	def compute_area
+		super
 		@area = 0.5*@base*@height
 	end
 
@@ -69,26 +72,25 @@ class Triangle < Polygon
 	end
 end
 
+
+Square.properties
+Rectangle.properties
+Triangle.properties
+
+
 square = Square.new
 square.side = 10
 square.compute_area
-
-Square.properties
 puts "Area of square is #{square.area}"
-
 
 rectangle = Rectangle.new
 rectangle.length = 10
 rectangle.breadth = 20
 rectangle.compute_area
-
-Rectangle.properties
 puts "Area of rectangle is #{rectangle.area}"
 
 triangle = Triangle.new
 triangle.base = 10
 triangle.height = 20
 triangle.compute_area
-
-Triangle.properties
 puts "Area of triangle is #{triangle.area}"
