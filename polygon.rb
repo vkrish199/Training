@@ -3,11 +3,6 @@ class Polygon
 	attr_reader :area
 
 	def initialize
-		@side = 0
-		@length = 0
-		@breadth = 0
-		@base = 0
-		@height = 0
 		@area = 0
 	end
 	
@@ -24,6 +19,7 @@ class Square < Polygon
 
 	def initialize
 		super
+		@side = 0
 	end
 
 	def compute_area
@@ -42,6 +38,8 @@ class Rectangle < Polygon
 
 	def initialize
 		super
+		@length = 0
+		@breadth = 0
 	end
 
 	def compute_area
@@ -60,6 +58,8 @@ class Triangle < Polygon
 
 	def initialize
 		super
+		@base = 0
+		@height = 0
 	end
 
 	def compute_area
