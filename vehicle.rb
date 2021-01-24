@@ -8,7 +8,13 @@ class Vehicle
 	protected
 
 	def protected_test(vehicle)
-		puts "Your #{vehicle} is moving"
+		puts "Your #{vehicle} has #{@no_of_tyres} tyres and #{@seats} seats and is moving"
+	end
+
+	private
+
+	def private_test
+		puts "Vehicle tracker:"
 	end
 end
 
@@ -19,7 +25,8 @@ class Car < Vehicle
 	end
 
 	def moves
-		protected_test("car")
+		private_test
+		self.protected_test("car")
 	end
 
 
@@ -32,7 +39,8 @@ class Bike < Vehicle
 	end
 
 	def moves
-		protected_test("bike")
+		private_test
+		self.protected_test("bike")
 	end
 end
 
