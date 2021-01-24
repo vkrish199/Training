@@ -3,9 +3,9 @@ class Rectangle
 	attr_accessor :area
 	attr_writer :length, :breadth
 
-	def initialize(length = nil, breadth = nil)
-		@length = length
-		@breadth = breadth
+	def initialize
+		@length = nil
+		@breadth = nil
 		@area = nil
 	end
 
