@@ -8,7 +8,7 @@ class Vehicle
 	protected
 
 	def protected_test(vehicle)
-		puts "Below is your #{vehicle} info"
+		puts "Your #{vehicle} is moving"
 	end
 end
 
@@ -20,7 +20,6 @@ class Car < Vehicle
 
 	def moves
 		protected_test("car")
-		puts "Car has #{@no_of_tyres} tyres and #{@seats} seats and moving"
 	end
 
 
@@ -34,7 +33,6 @@ class Bike < Vehicle
 
 	def moves
 		protected_test("bike")
-		puts "Bike has #{@no_of_tyres} tyres and #{@seats} seats and moving"
 	end
 end
 
